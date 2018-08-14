@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EveryDoDetailViewController.h
 //  EveryDo_Assignment
 //
 //  Created by Nathan Wainwright on 2018-08-14.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDataSource>
-
-@property NSArray *allTasks;
-
+@interface EveryDoDetailViewController : UIViewController
 
 @end
-

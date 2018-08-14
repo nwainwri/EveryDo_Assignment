@@ -15,6 +15,8 @@
 		F19BB756212377CD0079B43F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB755212377CD0079B43F /* main.m */; };
 		F19BB760212377CD0079B43F /* EveryDo_AssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB75F212377CD0079B43F /* EveryDo_AssignmentTests.m */; };
 		F19BB76C212378760079B43F /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB76B212378760079B43F /* ToDoItem.m */; };
+		F19BB76F21237C830079B43F /* EveryDoCellClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB76E21237C830079B43F /* EveryDoCellClass.m */; };
+		F19BB772212387D60079B43F /* EveryDoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB771212387D60079B43F /* EveryDoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		F19BB761212377CD0079B43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19BB76A212378760079B43F /* ToDoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
 		F19BB76B212378760079B43F /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+		F19BB76D21237C830079B43F /* EveryDoCellClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EveryDoCellClass.h; sourceTree = "<group>"; };
+		F19BB76E21237C830079B43F /* EveryDoCellClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDoCellClass.m; sourceTree = "<group>"; };
+		F19BB770212387D60079B43F /* EveryDoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EveryDoDetailViewController.h; sourceTree = "<group>"; };
+		F19BB771212387D60079B43F /* EveryDoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDoDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +94,13 @@
 				F19BB747212377C80079B43F /* AppDelegate.m */,
 				F19BB749212377C80079B43F /* ViewController.h */,
 				F19BB74A212377C80079B43F /* ViewController.m */,
-				F19BB74C212377C80079B43F /* Main.storyboard */,
 				F19BB76A212378760079B43F /* ToDoItem.h */,
 				F19BB76B212378760079B43F /* ToDoItem.m */,
+				F19BB76D21237C830079B43F /* EveryDoCellClass.h */,
+				F19BB76E21237C830079B43F /* EveryDoCellClass.m */,
+				F19BB770212387D60079B43F /* EveryDoDetailViewController.h */,
+				F19BB771212387D60079B43F /* EveryDoDetailViewController.m */,
+				F19BB74C212377C80079B43F /* Main.storyboard */,
 				F19BB74F212377CD0079B43F /* Assets.xcassets */,
 				F19BB751212377CD0079B43F /* LaunchScreen.storyboard */,
 				F19BB754212377CD0079B43F /* Info.plist */,
@@ -212,6 +222,8 @@
 				F19BB756212377CD0079B43F /* main.m in Sources */,
 				F19BB76C212378760079B43F /* ToDoItem.m in Sources */,
 				F19BB748212377C80079B43F /* AppDelegate.m in Sources */,
+				F19BB772212387D60079B43F /* EveryDoDetailViewController.m in Sources */,
+				F19BB76F21237C830079B43F /* EveryDoCellClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
