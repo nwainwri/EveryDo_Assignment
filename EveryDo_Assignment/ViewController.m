@@ -9,8 +9,10 @@
 #import "ViewController.h"
 #import "ToDoItem.h"
 #import "EveryDoCellClass.h"
+#import "EveryDoDetailViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *EveryDoTableViewer;
 
 @end
 
@@ -28,7 +30,7 @@
     ToDoItem *seventhItem = [[ToDoItem alloc] initWithTaskTitle:@"SEVenth One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:3 andFinallyTheStatus:YES];
     ToDoItem *eightItem = [[ToDoItem alloc] initWithTaskTitle:@"8 One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:3 andFinallyTheStatus:NO];
     ToDoItem *ninthItem = [[ToDoItem alloc] initWithTaskTitle:@"NINE NINE One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:3 andFinallyTheStatus:YES];
-
+    
     self.allTasks = @[firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem, seventhItem, eightItem, ninthItem];
     
 }
@@ -55,8 +57,27 @@
     return cell;
 }
 
+
+// MARK: Where app will fire off information to load detailed view....
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    //prep app to pass details INTO the detailed viewer.
+    
+    if ([segue.identifier isEqualToString:@"everyDoTaskDetailView"]){ // chekcs to ensure that it's going to rigth view controller
+        EveryDoDetailViewController *detailView = segue.destinationViewController;
+//        UITableView * tableView = self.EveryDoTableViewer;
+        
+        ToDoItem *choiceTask = self.allTasks[self.EveryDoTableViewer.indexPathForSelectedRow.row];
+
+        detailView.currentItem = choiceTask;
+        
+//        detailView.EveryDoDetailTaskTitle.text = choiceTask.taskTitle;
+//        detailView.EveryDoDetailTaskStatus.text = @(choiceTask.taskItemStatus).stringValue;
+//        detailView.EveryDoDetailTaskPriority.text = @(choiceTask.taskItemPriority).stringValue;
+//        detailView.EveryDoDetailTaskDescription.text = choiceTask.taskItemDescription;
+    }
+    
+    
+    
+    //     NO [self performSegueWithIdentifier:@"everyDoTaskDetailView" sender:self];
     
 }
 

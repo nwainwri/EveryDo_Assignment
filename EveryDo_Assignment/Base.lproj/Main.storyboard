@@ -88,6 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="qrc-G6-b0m"/>
+                    <connections>
+                        <outlet property="EveryDoTableViewer" destination="aEo-t7-BkP" id="kde-ip-bKZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,6 +150,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dro-Kp-JTt"/>
                     </view>
+                    <connections>
+                        <outlet property="EveryDoDetailTaskDescription" destination="uOb-yQ-2dU" id="Uc8-9c-3s9"/>
+                        <outlet property="EveryDoDetailTaskPriority" destination="cgV-dV-tQl" id="hXr-0i-FUW"/>
+                        <outlet property="EveryDoDetailTaskStatus" destination="1lv-W6-8f5" id="fZu-Qy-MZJ"/>
+                        <outlet property="EveryDoDetailTaskTitle" destination="scZ-0K-Xaf" id="oyP-vX-iq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuG-XW-4t1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

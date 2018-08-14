@@ -7,8 +7,9 @@
 //
 
 #import "EveryDoDetailViewController.h"
-
+#import "ToDoItem.h"
 @interface EveryDoDetailViewController ()
+
 
 @end
 
@@ -16,8 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.EveryDoDetailTaskTitle.text = self.currentItem.taskTitle;
+    self.EveryDoDetailTaskDescription.text = self.currentItem.taskItemDescription;
+    self.EveryDoDetailTaskStatus.text = @(self.currentItem.taskItemStatus).stringValue;
+    self.EveryDoDetailTaskPriority.text = @(self.currentItem.taskItemPriority).stringValue;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
