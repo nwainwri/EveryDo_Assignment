@@ -14,6 +14,7 @@
 		F19BB753212377CD0079B43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19BB751212377CD0079B43F /* LaunchScreen.storyboard */; };
 		F19BB756212377CD0079B43F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB755212377CD0079B43F /* main.m */; };
 		F19BB760212377CD0079B43F /* EveryDo_AssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB75F212377CD0079B43F /* EveryDo_AssignmentTests.m */; };
+		F19BB76C212378760079B43F /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB76B212378760079B43F /* ToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F19BB75B212377CD0079B43F /* EveryDo_AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EveryDo_AssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19BB75F212377CD0079B43F /* EveryDo_AssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDo_AssignmentTests.m; sourceTree = "<group>"; };
 		F19BB761212377CD0079B43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F19BB76A212378760079B43F /* ToDoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		F19BB76B212378760079B43F /* ToDoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				F19BB749212377C80079B43F /* ViewController.h */,
 				F19BB74A212377C80079B43F /* ViewController.m */,
 				F19BB74C212377C80079B43F /* Main.storyboard */,
+				F19BB76A212378760079B43F /* ToDoItem.h */,
+				F19BB76B212378760079B43F /* ToDoItem.m */,
 				F19BB74F212377CD0079B43F /* Assets.xcassets */,
 				F19BB751212377CD0079B43F /* LaunchScreen.storyboard */,
 				F19BB754212377CD0079B43F /* Info.plist */,
@@ -205,6 +210,7 @@
 			files = (
 				F19BB74B212377C80079B43F /* ViewController.m in Sources */,
 				F19BB756212377CD0079B43F /* main.m in Sources */,
+				F19BB76C212378760079B43F /* ToDoItem.m in Sources */,
 				F19BB748212377C80079B43F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
