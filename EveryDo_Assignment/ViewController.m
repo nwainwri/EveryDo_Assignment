@@ -22,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     ToDoItem *firstItem = [[ToDoItem alloc] initWithTaskTitle:@"First One here" andDescription:@"This is a long item?" alsoThePriority:@"1" andFinallyTheStatus:NO];
     ToDoItem *secondItem = [[ToDoItem alloc] initWithTaskTitle:@"Second One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:@"3" andFinallyTheStatus:YES];
     ToDoItem *thirdItem = [[ToDoItem alloc] initWithTaskTitle:@"third One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:@"2" andFinallyTheStatus:NO];
@@ -35,6 +33,9 @@
     ToDoItem *ninthItem = [[ToDoItem alloc] initWithTaskTitle:@"NINE NINE One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:@"3" andFinallyTheStatus:YES];
     self.allTasks = @[firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem, seventhItem, eightItem, ninthItem];
     
+   //NSArray *newArray =  [self.allTasks sortedArrayUsingSelector:@selector(boolValue)];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +45,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+- (IBAction)markTaskDoneSwipeGesture:(UISwipeGestureRecognizer *)sender {
+    CGPoint currentSpot = [sender locationInView:self.EveryDoTableViewer];
+    NSIndexPath *currentPick = [self.EveryDoTableViewer indexPathForRowAtPoint:currentSpot];
+    NSLog(@"TEST");
+    self.allTasks[currentPick.row].taskItemStatus = !self.allTasks[currentPick.row].taskItemStatus;
+    
+    [self.EveryDoTableViewer reloadData];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -68,9 +79,9 @@
     } else if ([segue.identifier isEqualToString:@"addNewTaskScreen"]){
         AddTaskViewController *addView = segue.destinationViewController;
         addView.delegate = self;
-
+        
     }
-
+    
 }
 
 - (void)addNewTask:(ToDoItem *)item {

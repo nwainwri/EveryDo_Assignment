@@ -51,6 +51,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="g9H-aM-Pcl" firstAttribute="leading" secondItem="Kil-UD-cj9" secondAttribute="leading" constant="15" id="1aS-N3-PAp"/>
                                             <constraint firstAttribute="bottom" secondItem="vPE-6c-dnz" secondAttribute="bottom" constant="12" id="3xb-3L-F4n"/>
@@ -75,6 +76,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="fRl-r5-Mel"/>
+                                    <outletCollection property="gestureRecognizers" destination="uT4-Hv-Glk" appends="YES" id="koz-4h-r27"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-Zs-5Ft">
@@ -106,6 +108,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="uT4-Hv-Glk">
+                    <connections>
+                        <action selector="markTaskDoneSwipeGesture:" destination="BYZ-38-t0r" id="4TY-z0-9Xl"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="956" y="133.5832083958021"/>
         </scene>
@@ -147,7 +154,6 @@
                         <constraints>
                             <constraint firstItem="ncD-yN-1Zp" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="12N-OA-Vym"/>
                             <constraint firstItem="he4-FP-faP" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="9gZ-bb-UD4"/>
-                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="0rN-Mt-szf" secondAttribute="bottom" constant="362" id="CUF-FN-6NX"/>
                             <constraint firstItem="0rN-Mt-szf" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="23" id="F8U-0d-K3I"/>
                             <constraint firstItem="q8f-0G-Ne0" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="29" id="N8L-kF-Yew"/>
                             <constraint firstItem="he4-FP-faP" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="191" id="OW4-5Z-peM"/>
@@ -220,7 +226,6 @@
                             <constraint firstItem="dro-Kp-JTt" firstAttribute="bottom" secondItem="uOb-yQ-2dU" secondAttribute="bottom" constant="569" id="VWR-UR-tgE"/>
                             <constraint firstItem="cgV-dV-tQl" firstAttribute="leading" secondItem="dro-Kp-JTt" secondAttribute="leading" constant="16" id="Vhf-tI-8k9"/>
                             <constraint firstItem="dro-Kp-JTt" firstAttribute="trailing" secondItem="cgV-dV-tQl" secondAttribute="trailing" constant="304" id="YHx-x2-H17"/>
-                            <constraint firstItem="dro-Kp-JTt" firstAttribute="bottom" secondItem="1lv-W6-8f5" secondAttribute="bottom" constant="520" id="ZH2-u4-KCy"/>
                             <constraint firstItem="dro-Kp-JTt" firstAttribute="bottom" secondItem="cgV-dV-tQl" secondAttribute="bottom" constant="471" id="cwi-Zx-5wM"/>
                             <constraint firstItem="dro-Kp-JTt" firstAttribute="trailing" secondItem="1lv-W6-8f5" secondAttribute="trailing" constant="309" id="ehi-3h-PWa"/>
                             <constraint firstItem="1lv-W6-8f5" firstAttribute="leading" secondItem="dro-Kp-JTt" secondAttribute="leading" constant="16" id="fz4-7V-Z6J"/>

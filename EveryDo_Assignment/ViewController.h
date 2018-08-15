@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController <UITableViewDataSource, AddNewTaskProtocol>
 
-@property NSArray *allTasks;
+@property NSArray <ToDoItem*> *allTasks;
 
 
 

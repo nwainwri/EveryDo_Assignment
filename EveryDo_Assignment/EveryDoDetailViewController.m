@@ -11,6 +11,8 @@
 @interface EveryDoDetailViewController ()
 
 
+
+
 @end
 
 @implementation EveryDoDetailViewController
