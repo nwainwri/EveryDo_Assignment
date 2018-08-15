@@ -31,7 +31,14 @@
 }
 
 -(void)addButtonPressed:(UIButton *)sender{
-    ToDoItem *passBackItem = [[ToDoItem alloc] initWithTaskTitle:self.EveryDoAddTaskTitle.text andDescription:self.EveryDoAddTaskDescription.text alsoThePriority:1 andFinallyTheStatus:NO];
+    ToDoItem *passBackItem = [[ToDoItem alloc] initWithTaskTitle:self.EveryDoAddTaskTitle.text andDescription:self.EveryDoAddTaskDescription.text alsoThePriority:self.EveryDoAddTaskPriority.text andFinallyTheStatus:NO];
+    [self.delegate addNewTask:passBackItem];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+//    [self.navigationController popViewControllerAnimated:YES];
     //self.taskToPassBack = passBackItem;
     
    

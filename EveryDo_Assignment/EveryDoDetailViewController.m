@@ -20,7 +20,7 @@
     self.EveryDoDetailTaskTitle.text = self.currentItem.taskTitle;
     self.EveryDoDetailTaskDescription.text = self.currentItem.taskItemDescription;
     self.EveryDoDetailTaskStatus.text = @(self.currentItem.taskItemStatus).stringValue;
-    self.EveryDoDetailTaskPriority.text = @(self.currentItem.taskItemPriority).stringValue;
+    self.EveryDoDetailTaskPriority.text = self.currentItem.taskItemPriority;
 }
 
 

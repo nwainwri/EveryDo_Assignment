@@ -12,11 +12,11 @@
 
 @property NSString *taskTitle;
 @property NSString *taskItemDescription;
-@property int taskItemPriority;
+@property NSString *taskItemPriority;
 @property BOOL taskItemStatus;
 
 
-- (instancetype)initWithTaskTitle: (NSString *)title andDescription:(NSString *)description alsoThePriority:(int)priority andFinallyTheStatus:(BOOL)status;
+- (instancetype)initWithTaskTitle: (NSString *)title andDescription:(NSString *)description alsoThePriority:(NSString *)priority andFinallyTheStatus:(BOOL)status;
 
 
 

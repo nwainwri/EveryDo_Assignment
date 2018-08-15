@@ -10,7 +10,7 @@
 
 @implementation ToDoItem
 
-- (instancetype)initWithTaskTitle: (NSString *)title andDescription:(NSString *)description alsoThePriority:(int)priority andFinallyTheStatus:(BOOL)status{
+- (instancetype)initWithTaskTitle: (NSString *)title andDescription:(NSString *)description alsoThePriority:(NSString *)priority andFinallyTheStatus:(BOOL)status{
     self = [super init];
     if (self) {
         _taskTitle = title;

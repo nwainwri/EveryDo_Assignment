@@ -83,7 +83,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="78y-8v-9kC" kind="show" id="Wzn-dV-CQS"/>
+                                    <segue destination="78y-8v-9kC" kind="show" identifier="addNewTaskScreen" id="Wzn-dV-CQS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,7 +136,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-yN-1Zp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-yN-1Zp">
                                 <rect key="frame" x="16" y="171" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -168,6 +168,7 @@
                         <outlet property="EveryDoAddTaskDescription" destination="he4-FP-faP" id="f5m-Hv-1v8"/>
                         <outlet property="EveryDoAddTaskPriority" destination="ncD-yN-1Zp" id="Xy9-69-dES"/>
                         <outlet property="EveryDoAddTaskTitle" destination="q8f-0G-Ne0" id="svi-MI-Sea"/>
+                        <outlet property="EveryDoTaskAddButtonPressed" destination="0rN-Mt-szf" id="lQT-Ef-Tr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4w-W8-UPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
