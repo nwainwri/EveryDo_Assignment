@@ -15,6 +15,8 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *EveryDoTableViewer;
 
+
+-(void) sortAndReload;
 @end
 
 @implementation ViewController
@@ -33,10 +35,13 @@
     ToDoItem *ninthItem = [[ToDoItem alloc] initWithTaskTitle:@"NINE NINE One Here" andDescription:@"I should fill with Lorum Ipsum" alsoThePriority:@"3" andFinallyTheStatus:YES];
     self.allTasks = @[firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem, seventhItem, eightItem, ninthItem];
     
-   //NSArray *newArray =  [self.allTasks sortedArrayUsingSelector:@selector(boolValue)];
+    self.allTasks =  [self.allTasks sortedArrayUsingComparator:^NSComparisonResult(ToDoItem*  _Nonnull obj1, ToDoItem*  _Nonnull obj2) {
+        return obj1.taskItemStatus && !obj2.taskItemStatus;
+    }];
     
 
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,11 +55,9 @@
 - (IBAction)markTaskDoneSwipeGesture:(UISwipeGestureRecognizer *)sender {
     CGPoint currentSpot = [sender locationInView:self.EveryDoTableViewer];
     NSIndexPath *currentPick = [self.EveryDoTableViewer indexPathForRowAtPoint:currentSpot];
-    NSLog(@"TEST");
     self.allTasks[currentPick.row].taskItemStatus = !self.allTasks[currentPick.row].taskItemStatus;
     
-    [self.EveryDoTableViewer reloadData];
-    
+    [self sortAndReload];    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -88,8 +91,16 @@
     // this is wwhere we will gather new task from add trask view.... and pass into
     self.allTasks = [self.allTasks arrayByAddingObject:item];
     // reload array here or in viewdidload?
+    [self sortAndReload];
+}
+
+-(void) sortAndReload {
+    self.allTasks =  [self.allTasks sortedArrayUsingComparator:^NSComparisonResult(ToDoItem*  _Nonnull obj1, ToDoItem*  _Nonnull obj2) {
+        return obj1.taskItemStatus && !obj2.taskItemStatus;
+    }];
     [self.EveryDoTableViewer reloadData];
 }
+
 
 
 
