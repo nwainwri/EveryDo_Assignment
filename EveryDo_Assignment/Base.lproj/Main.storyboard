@@ -82,6 +82,9 @@
                                 <state key="normal" title="Add Task">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="78y-8v-9kC" kind="show" id="Wzn-dV-CQS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,44 +109,66 @@
             </objects>
             <point key="canvasLocation" x="956" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="cem-h9-Cbs">
             <objects>
-                <viewController id="78y-8v-9kC" sceneMemberID="viewController">
+                <viewController id="78y-8v-9kC" customClass="AddTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0S-A0-iaF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TaskTitle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-0G-Ne0">
-                                <rect key="frame" x="16" y="49" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-0G-Ne0">
+                                <rect key="frame" x="16" y="93" width="173" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Priority" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-yN-1Zp">
-                                <rect key="frame" x="16" y="87" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="he4-FP-faP">
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Task Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hdL-kE-QHd">
-                                <rect key="frame" x="16" y="125" width="343" height="276"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rN-Mt-szf">
+                                <rect key="frame" x="23" y="321" width="37" height="28"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncD-yN-1Zp">
+                                <rect key="frame" x="16" y="171" width="97" height="30"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textView>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FND-Ao-MLn" firstAttribute="trailing" secondItem="hdL-kE-QHd" secondAttribute="trailing" constant="16" id="07T-Wx-4oj"/>
-                            <constraint firstItem="hdL-kE-QHd" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="Yx8-75-6sd"/>
-                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="hdL-kE-QHd" secondAttribute="bottom" constant="266" id="kbP-JJ-jah"/>
-                            <constraint firstItem="hdL-kE-QHd" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="105" id="v1r-YB-zNa"/>
+                            <constraint firstItem="ncD-yN-1Zp" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="12N-OA-Vym"/>
+                            <constraint firstItem="he4-FP-faP" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="9gZ-bb-UD4"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="0rN-Mt-szf" secondAttribute="bottom" constant="362" id="CUF-FN-6NX"/>
+                            <constraint firstItem="0rN-Mt-szf" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="23" id="F8U-0d-K3I"/>
+                            <constraint firstItem="q8f-0G-Ne0" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="29" id="N8L-kF-Yew"/>
+                            <constraint firstItem="he4-FP-faP" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="191" id="OW4-5Z-peM"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="he4-FP-faP" secondAttribute="bottom" constant="426" id="WgU-TZ-oq4"/>
+                            <constraint firstItem="ncD-yN-1Zp" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="107" id="ZKx-Wt-1dD"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="trailing" secondItem="ncD-yN-1Zp" secondAttribute="trailing" constant="262" id="dVx-ko-dL1"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="q8f-0G-Ne0" secondAttribute="bottom" constant="588" id="fCr-HZ-wS0"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="bottom" secondItem="ncD-yN-1Zp" secondAttribute="bottom" constant="510" id="myA-uk-KkY"/>
+                            <constraint firstItem="q8f-0G-Ne0" firstAttribute="leading" secondItem="FND-Ao-MLn" secondAttribute="leading" constant="16" id="pmu-SS-230"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="trailing" secondItem="q8f-0G-Ne0" secondAttribute="trailing" constant="186" id="qYx-6z-cvm"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="trailing" secondItem="he4-FP-faP" secondAttribute="trailing" constant="16" id="tQ9-Fw-7PW"/>
+                            <constraint firstItem="0rN-Mt-szf" firstAttribute="top" secondItem="FND-Ao-MLn" secondAttribute="top" constant="257" id="v6e-O2-2xV"/>
+                            <constraint firstItem="FND-Ao-MLn" firstAttribute="trailing" secondItem="0rN-Mt-szf" secondAttribute="trailing" constant="315" id="vDC-0V-yWU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FND-Ao-MLn"/>
                     </view>
+                    <connections>
+                        <outlet property="EveryDoAddTaskDescription" destination="he4-FP-faP" id="f5m-Hv-1v8"/>
+                        <outlet property="EveryDoAddTaskPriority" destination="ncD-yN-1Zp" id="Xy9-69-dES"/>
+                        <outlet property="EveryDoAddTaskTitle" destination="q8f-0G-Ne0" id="svi-MI-Sea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4w-W8-UPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

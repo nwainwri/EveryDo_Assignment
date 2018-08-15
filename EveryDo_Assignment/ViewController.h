@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddNewTaskProtocol.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDataSource, AddNewTaskProtocol>
 
 @property NSArray *allTasks;
+
+
 
 
 @end
